@@ -1,15 +1,9 @@
+'use client';
 
 import React from 'react';
-import { clsx, type ClassValue } from 'clsx';
-import { twMerge } from 'tailwind-merge';
-import * as TabsPrimitive from '@radix-ui/react-tabs'; // Assuming we might not have radix, I will implement simple tabs or simulate them. 
-// actually, I should stick to the pattern of UIComponents.tsx which seems to be custom implementations or wrappers.
-// Since I cannot install new packages like @radix-ui/react-tabs easily in this environment without user prompting, I will implement a simple custom Tabs component set.
+import { cn } from '@/lib/cn';
 
-// Utility for merging classes
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
+export { cn };
 
 // --- Button ---
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -48,7 +42,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button";
 
 // --- Input ---
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+export type InputProps = React.InputHTMLAttributes<HTMLInputElement>;
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
@@ -68,7 +62,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
 Input.displayName = "Input"
 
 // --- Textarea ---
-export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+export type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, ...props }, ref) => {
@@ -204,9 +198,11 @@ export const Avatar = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTML
 Avatar.displayName = "Avatar";
 
 export const AvatarImage = React.forwardRef<HTMLImageElement, React.ImgHTMLAttributes<HTMLImageElement>>(
-  ({ className, ...props }, ref) => (
+  ({ className, alt = '', ...props }, ref) => (
+    // eslint-disable-next-line @next/next/no-img-element
     <img
       ref={ref}
+      alt={alt}
       className={cn("aspect-square h-full w-full", className)}
       {...props}
     />
