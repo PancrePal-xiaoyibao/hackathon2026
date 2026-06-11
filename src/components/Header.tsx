@@ -3,8 +3,9 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Moon, Sun, Code2 } from 'lucide-react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import { cn } from './UIComponents';
 import { useTheme } from './ThemeProvider';
 import { NAV_ITEMS, SITE } from '@/lib/site';
@@ -83,8 +84,8 @@ export function Header({ forceDark = false }: { forceDark?: boolean }) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5 group" aria-label="返回首页">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-violet-600 text-white shadow-lg shadow-violet-500/20 group-hover:scale-105 transition-transform">
-              <Code2 size={18} />
+            <div className="relative h-9 w-9 group-hover:scale-105 transition-transform">
+              <Image src="/xiao-x-bao.png" alt="小X宝" fill sizes="36px" className="object-contain" />
             </div>
             <span className={cn('text-base font-bold tracking-tight transition-colors', logoText)}>
               小X宝医疗黑客松
