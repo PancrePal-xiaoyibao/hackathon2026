@@ -32,6 +32,7 @@ export const SITE = {
     '魔搭 ModelScope',
     'KnowS',
     'StepFun 阶跃星辰',
+    'FastGPT',
     'WAIC 2026',
     '开源医疗',
     '医疗 AI',
@@ -59,6 +60,7 @@ export const SITE = {
     coHost: '魔搭 ModelScope',
     partner: 'KnowS',
     llmSponsor: '阶跃星辰 StepFun',
+    ragPartner: 'FastGPT',
   },
   schedule: {
     start: '2026-06-18',

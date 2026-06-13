@@ -5,14 +5,25 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2, FileCode, Terminal, Wrench } from 'lucide-react';
+import FastGPTColor from '@lobehub/icons/es/FastGPT/components/Color';
 import { Button, Badge } from './UIComponents';
 import { SITE } from '@/lib/site';
 
-const heroSponsors = [
+interface HeroSponsor {
+  name: string;
+  role: string;
+  logo?: string;
+  w?: number;
+  h?: number;
+  logoComponent?: React.ReactNode;
+}
+
+const heroSponsors: HeroSponsor[] = [
   { name: '小X宝', role: '主办', logo: '/xiao-x-bao.png', w: 1691, h: 1692 },
   { name: '魔搭 ModelScope', role: '联合主办', logo: '/modelscope.jpg', w: 8504, h: 8504 },
   { name: 'KnowS', role: '医学循证 AI', logo: '/sponsor-knows.png', w: 336, h: 354 },
   { name: '阶跃星辰 StepFun', role: '大模型', logo: '/sponsor-stepfun.png', w: 889, h: 339 },
+  { name: 'FastGPT', role: 'RAG 知识库', logoComponent: <FastGPTColor size={28} /> },
 ];
 
 export const Hero: React.FC = () => {
@@ -187,17 +198,21 @@ export const Hero: React.FC = () => {
                     </div>
                     <ArrowRight size={12} className="text-zinc-400 group-hover:text-violet-500 group-hover:translate-x-0.5 transition" />
                   </div>
-                  <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+                  <div className="grid grid-cols-3 gap-x-4 gap-y-3">
                     {heroSponsors.map((s) => (
                       <div key={s.name} className="flex flex-col gap-1.5">
                         <div className="h-7 flex items-center">
-                          <Image
-                            src={s.logo}
-                            alt={`${s.name} logo`}
-                            width={s.w}
-                            height={s.h}
-                            className="h-7 w-auto object-contain"
-                          />
+                          {s.logoComponent ? (
+                            s.logoComponent
+                          ) : (
+                            <Image
+                              src={s.logo!}
+                              alt={`${s.name} logo`}
+                              width={s.w!}
+                              height={s.h!}
+                              className="h-7 w-auto object-contain"
+                            />
+                          )}
                         </div>
                         <div className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 dark:text-zinc-500 truncate">
                           {s.role}

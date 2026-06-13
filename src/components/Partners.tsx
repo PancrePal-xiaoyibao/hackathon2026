@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import FastGPTColor from '@lobehub/icons/es/FastGPT/components/Color';
 import { SITE } from '@/lib/site';
 import { cn } from '@/lib/cn';
 
@@ -12,9 +13,10 @@ interface Partner {
   desc: string;
   highlights: string[];
   badge: string;
-  logo: string;
-  logoWidth: number;
-  logoHeight: number;
+  logo?: string;
+  logoWidth?: number;
+  logoHeight?: number;
+  logoComponent?: React.ReactNode;
   border: string;
   link?: string;
 }
@@ -66,6 +68,16 @@ const partners: Partner[] = [
     logoHeight: 339,
     border: 'border-emerald-200 dark:border-emerald-900/40',
     link: 'https://platform.stepfun.com/',
+  },
+  {
+    name: 'FastGPT',
+    role: '合作方 · RAG 知识库平台',
+    desc: '开源 AI 知识库构建平台，基于 LLM 提供开箱即用的数据处理、RAG 检索增强与可视化工作流编排能力。支持多模型接入、文档/网页知识导入与 API 集成，帮助参赛者快速构建具备领域知识的医疗 AI 应用。',
+    highlights: ['RAG 知识库', '可视化工作流', '开源 · 可私有化部署'],
+    badge: 'PARTNER',
+    logoComponent: <FastGPTColor size={48} />,
+    border: 'border-blue-200 dark:border-blue-900/40',
+    link: 'https://tryfastgpt.ai',
   },
 ];
 
@@ -123,14 +135,18 @@ export const Partners: React.FC = () => {
               )}
             >
               <div className="flex items-center mb-4 h-14">
-                <Image
-                  src={p.logo}
-                  alt={`${p.name} logo`}
-                  width={p.logoWidth}
-                  height={p.logoHeight}
-                  className="h-12 w-auto object-contain"
-                  priority
-                />
+                {p.logoComponent ? (
+                  p.logoComponent
+                ) : (
+                  <Image
+                    src={p.logo!}
+                    alt={`${p.name} logo`}
+                    width={p.logoWidth!}
+                    height={p.logoHeight!}
+                    className="h-12 w-auto object-contain"
+                    priority
+                  />
+                )}
               </div>
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
@@ -168,7 +184,8 @@ export const Partners: React.FC = () => {
           <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
             本次黑客松由 <strong className="text-zinc-900 dark:text-zinc-100">{SITE.hosts.main}</strong> 发起，
             联合 <strong className="text-zinc-900 dark:text-zinc-100">{SITE.hosts.coHost}</strong> 共同主办，
-            合作方 <strong className="text-zinc-900 dark:text-zinc-100">{SITE.hosts.partner}</strong>，
+            合作方 <strong className="text-zinc-900 dark:text-zinc-100">{SITE.hosts.partner}</strong>、
+            <strong className="text-zinc-900 dark:text-zinc-100">{SITE.hosts.ragPartner}</strong>，
             <strong className="text-zinc-900 dark:text-zinc-100">{SITE.hosts.llmSponsor}</strong> 提供大模型 API 额度支持。
           </p>
           <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-4 font-mono">

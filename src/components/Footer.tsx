@@ -44,7 +44,7 @@ export function Footer({ forceDark = false }: FooterProps) {
           <p className={cn('text-xs leading-relaxed', subText)}>
             主办：{SITE.hosts.main} × {SITE.hosts.coHost}
             <br />
-            合作方：{SITE.hosts.partner} · 大模型赞助：{SITE.hosts.llmSponsor}
+            合作方：{SITE.hosts.partner} · {SITE.hosts.ragPartner} · 大模型赞助：{SITE.hosts.llmSponsor}
           </p>
         </div>
 

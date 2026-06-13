@@ -1,7 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import FastGPTColor from '@lobehub/icons/es/FastGPT/components/Color';
 
-const sponsors = [
+interface Sponsor {
+  name: string;
+  role: string;
+  logo?: string;
+  width?: number;
+  height?: number;
+  logoComponent?: React.ReactNode;
+}
+
+const sponsors: Sponsor[] = [
   {
     name: '小X宝开源医疗社区',
     role: '主办',
@@ -30,6 +40,11 @@ const sponsors = [
     width: 889,
     height: 339,
   },
+  {
+    name: 'FastGPT',
+    role: '合作方',
+    logoComponent: <FastGPTColor size={40} />,
+  },
 ];
 
 export function SponsorStrip() {
@@ -56,13 +71,19 @@ export function SponsorStrip() {
               title={`${s.role} · ${s.name}`}
             >
               <div className="h-14 flex items-center">
-                <Image
-                  src={s.logo}
-                  alt={`${s.name} logo`}
-                  width={s.width}
-                  height={s.height}
-                  className="h-12 w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition duration-300"
-                />
+                {s.logoComponent ? (
+                  <div className="h-12 flex items-center grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition duration-300">
+                    {s.logoComponent}
+                  </div>
+                ) : (
+                  <Image
+                    src={s.logo!}
+                    alt={`${s.name} logo`}
+                    width={s.width!}
+                    height={s.height!}
+                    className="h-12 w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition duration-300"
+                  />
+                )}
               </div>
               <div className="text-center">
                 <div className="text-xs font-mono uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
