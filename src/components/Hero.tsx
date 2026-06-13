@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2, FileCode, Terminal, Wrench } from 'lucide-react';
 import FastGPTColor from '@lobehub/icons/es/FastGPT/components/Color';
+import ModelScopeColor from '@lobehub/icons/es/ModelScope/components/Color';
 import { Button, Badge } from './UIComponents';
 import { SITE } from '@/lib/site';
 
@@ -20,7 +21,7 @@ interface HeroSponsor {
 
 const heroSponsors: HeroSponsor[] = [
   { name: '小X宝', role: '主办', logo: '/xiao-x-bao.png', w: 1691, h: 1692 },
-  { name: '魔搭 ModelScope', role: '联合主办', logo: '/modelscope.jpg', w: 8504, h: 8504 },
+  { name: '魔搭 ModelScope', role: '联合主办', logoComponent: <ModelScopeColor size={28} /> },
   { name: 'KnowS', role: '医学循证 AI', logo: '/sponsor-knows.png', w: 336, h: 354 },
   { name: '阶跃星辰 StepFun', role: '大模型', logo: '/sponsor-stepfun.png', w: 889, h: 339 },
   { name: 'FastGPT', role: 'RAG 知识库', logoComponent: <FastGPTColor size={28} /> },

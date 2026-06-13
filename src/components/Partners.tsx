@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import FastGPTColor from '@lobehub/icons/es/FastGPT/components/Color';
+import ModelScopeColor from '@lobehub/icons/es/ModelScope/components/Color';
 import { SITE } from '@/lib/site';
 import { cn } from '@/lib/cn';
 
@@ -39,9 +40,7 @@ const partners: Partner[] = [
     desc: '阿里达摩院联合 CCF 开源发展委员会推出的中国最大 AI 模型开源社区，已汇集 12 万+ 开源模型与 5500+ MCP 服务，覆盖 200+ 国家和地区的开发者。本次黑客松所有作品在此提交、部署与展示。',
     highlights: ['12 万+ 模型', '5500+ MCP 服务', '提交 / 部署平台'],
     badge: 'CO-HOST',
-    logo: '/modelscope.jpg',
-    logoWidth: 8504,
-    logoHeight: 8504,
+    logoComponent: <ModelScopeColor size={48} />,
     border: 'border-sky-200 dark:border-sky-900/40',
     link: 'https://modelscope.cn/',
   },

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Code2 } from 'lucide-react';
+import Image from 'next/image';
 import { cn } from '@/lib/cn';
 import { SITE } from '@/lib/site';
 
@@ -11,10 +11,6 @@ export function Footer({ forceDark = false }: FooterProps) {
   const containerClass = forceDark
     ? 'border-zinc-800 bg-zinc-950'
     : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950';
-
-  const logoIconBg = forceDark
-    ? 'bg-zinc-50 text-zinc-900'
-    : 'bg-zinc-900 dark:bg-zinc-50 text-white dark:text-zinc-900';
 
   const mainText = forceDark ? 'text-zinc-50' : 'text-zinc-900 dark:text-zinc-50';
   const subText = forceDark ? 'text-zinc-400' : 'text-zinc-500 dark:text-zinc-400';
@@ -28,14 +24,13 @@ export function Footer({ forceDark = false }: FooterProps) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-8 md:grid-cols-3">
         <div className="space-y-4">
           <Link href="/" className="flex items-center gap-2" aria-label="返回首页">
-            <div
-              className={cn(
-                'flex h-9 w-9 items-center justify-center rounded-lg transition-colors',
-                logoIconBg,
-              )}
-            >
-              <Code2 size={18} />
-            </div>
+            <Image
+              src="/xiao-x-bao.png"
+              alt="小X宝"
+              width={1691}
+              height={1692}
+              className="h-9 w-9 rounded-lg object-contain"
+            />
             <span className={cn('font-bold transition-colors', mainText)}>{SITE.name}</span>
           </Link>
           <p className={cn('text-sm leading-relaxed', subText)}>
