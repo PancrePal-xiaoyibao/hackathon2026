@@ -69,7 +69,7 @@ const partners: Partner[] = [
     link: 'https://platform.stepfun.com/',
   },
   {
-    name: 'FastGPT',
+    name: 'Sealos（FastGPT）',
     role: '合作方 · RAG 知识库平台',
     desc: '开源 AI 知识库构建平台，基于 LLM 提供开箱即用的数据处理、RAG 检索增强与可视化工作流编排能力。支持多模型接入、文档/网页知识导入与 API 集成，帮助参赛者快速构建具备领域知识的医疗 AI 应用。',
     highlights: ['RAG 知识库', '可视化工作流', '开源 · 可私有化部署'],

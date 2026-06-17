@@ -40,7 +40,7 @@ const sponsors: Sponsor[] = [
     height: 339,
   },
   {
-    name: 'FastGPT',
+    name: 'Sealos（FastGPT）',
     role: '合作方',
     logoComponent: <FastGPTColor size={40} />,
   },
