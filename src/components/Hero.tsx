@@ -96,7 +96,7 @@ export const Hero: React.FC = () => {
                 {SITE.sloganEn}
               </p>
               <p className="max-w-xl mx-auto lg:mx-0 text-base md:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
-                聚焦医疗垂直领域，构建可复用的 <strong className="text-zinc-900 dark:text-zinc-100 font-semibold">Skills 或 MCP 扩展工具</strong>。三阶段冲刺，直通 WAIC 2026 上海。
+                聚焦医疗垂直领域，构建可复用的 <strong className="text-zinc-900 dark:text-zinc-100 font-semibold">Skills 或 MCP 扩展工具</strong>。三阶段冲刺，魔搭礼品激励，决赛直通 WAIC 2026 上海。
               </p>
             </div>
 

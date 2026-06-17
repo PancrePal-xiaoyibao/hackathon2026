@@ -75,7 +75,7 @@ export const Features: React.FC = () => {
               </div>
               <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-2">直通 WAIC 2026</h3>
               <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                三个阶段共发放 3 张 WAIC 门票，获奖代表 7/17 — 7/20 上海现场展示。
+                三个阶段发放魔搭礼品（Vibecoding 键盘 ×2 + WAIC 门票 ×1），获奖代表 7/17 — 7/20 上海现场展示。
               </p>
             </div>
           </motion.div>

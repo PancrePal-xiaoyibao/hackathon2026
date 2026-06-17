@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Award, FileBadge, Github, Cloud, Ticket } from 'lucide-react';
+import { Trophy, Award, FileBadge, Github, Cloud, Ticket, Keyboard, Gift, KeyRound } from 'lucide-react';
 import { cn } from '@/lib/cn';
 
 interface RewardsProps {
@@ -15,7 +15,8 @@ const stagePrizes = [
     label: '阶段 1',
     date: '6/18 — 6/24',
     title: '🎯 最佳选题潜力奖',
-    reward: '1 张 WAIC 门票 + 开发者采访',
+    reward: '1 个 Vibecoding 键盘 + 开发者采访',
+    icon: Keyboard,
     desc: '重点评估选题是否真实、有价值、可在短周期内落地。',
     color: 'amber',
   },
@@ -24,7 +25,8 @@ const stagePrizes = [
     label: '阶段 2',
     date: '6/25 — 7/1',
     title: '⚡ 最佳 MVP 原型奖',
-    reward: '1 张 WAIC 门票 + 开发者采访',
+    reward: '1 个 Vibecoding 键盘 + 开发者采访',
+    icon: Keyboard,
     desc: '奖励最早把核心能力跑起来的队伍，必须能演示。',
     color: 'violet',
   },
@@ -34,6 +36,7 @@ const stagePrizes = [
     date: '7/2 — 7/8',
     title: '🌟 社区影响力奖',
     reward: '1 张 WAIC 门票 + 开发者采访',
+    icon: Ticket,
     desc: '综合有效调用、收藏、评论质量、传播质量，异常流量剔除。',
     color: 'emerald',
   },
@@ -46,6 +49,10 @@ const finalPrizes = [
     count: 'Top 3（3 名）',
     reward: '1000 RMB',
     note: '云资源或 API 额度',
+    perks: [
+      'KnowS 专业版-3 倍积分年度会员 ×1（等值 2,388 元 / 人）',
+      'StepFun Flash Max 季度套餐 ×1（等值 1,889 元 / 人）',
+    ],
     accent: 'from-amber-400 to-orange-500',
     iconColor: 'text-amber-500',
   },
@@ -55,6 +62,10 @@ const finalPrizes = [
     count: 'Top 4 — 10（7 名）',
     reward: '500 RMB',
     note: '云资源或 API 额度',
+    perks: [
+      'KnowS 专业版-1 倍积分年度会员 ×1（等值 828 元 / 人）',
+      'StepFun Flash Pro 季度套餐 ×1（等值 539 元 / 人）',
+    ],
     accent: 'from-zinc-300 to-zinc-500',
     iconColor: 'text-zinc-400',
   },
@@ -64,6 +75,7 @@ const finalPrizes = [
     count: 'Top 11 — 20（10 名）',
     reward: '100 RMB',
     note: '云资源或 API 额度',
+    perks: [] as string[],
     accent: 'from-orange-400 to-orange-700',
     iconColor: 'text-orange-500',
   },
@@ -99,6 +111,24 @@ const extras = [
   },
 ];
 
+const participationPerks = [
+  {
+    icon: Gift,
+    title: 'StepFun Flash Pro 月度套餐 ×1',
+    desc: '每位有效参赛选手均可领取，等值 199 元 / 人。',
+  },
+  {
+    icon: KeyRound,
+    title: 'KnowS 医学循证证据检索 API',
+    desc: '通过审核的参赛团队领取团队独立 API Key，共享总价值 10,000 元的活动调用额度池。',
+  },
+  {
+    icon: FileBadge,
+    title: '官方电子参与证书',
+    desc: '完成最终提交的参与者均可获得。',
+  },
+];
+
 export const Rewards: React.FC<RewardsProps> = ({ isFullPage = false }) => {
   return (
     <section
@@ -131,7 +161,37 @@ export const Rewards: React.FC<RewardsProps> = ({ isFullPage = false }) => {
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
-            既有阶段直通 WAIC 的荣耀，也有最终总评的丰厚云资源。我们尊重每一行有温度的代码。
+            参赛即得普惠权益，阶段冲刺有魔搭礼品，最终总评更有丰厚云资源与合作方专项权益。我们尊重每一行有温度的代码。
+          </p>
+        </div>
+
+        {/* Participation perks */}
+        <div className="mb-20">
+          <div className="text-center mb-8">
+            <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-400 dark:text-zinc-600">
+              Participation Perks · 参赛即得
+            </span>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {participationPerks.map((p, i) => (
+              <motion.div
+                key={p.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/40 backdrop-blur-md"
+              >
+                <div className="inline-flex p-3 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-violet-600 dark:text-violet-400 mb-3">
+                  <p.icon size={20} />
+                </div>
+                <h4 className="font-bold text-zinc-900 dark:text-zinc-100 mb-2">{p.title}</h4>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{p.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-zinc-400 dark:text-zinc-500 mt-6 font-mono">
+            * 参赛普惠权益由 StepFun / KnowS 单独提供，需通过审核后领取，具体发放形式以合作方最终确认为准
           </p>
         </div>
 
@@ -170,7 +230,7 @@ export const Rewards: React.FC<RewardsProps> = ({ isFullPage = false }) => {
                 </div>
                 <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2">{p.title}</h3>
                 <div className="flex items-center gap-2 mb-3">
-                  <Ticket size={14} className="text-zinc-500" />
+                  <p.icon size={14} className="text-zinc-500" />
                   <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{p.reward}</span>
                 </div>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{p.desc}</p>
@@ -203,11 +263,24 @@ export const Rewards: React.FC<RewardsProps> = ({ isFullPage = false }) => {
                 <div className="text-xs font-mono text-zinc-400 dark:text-zinc-500 mb-3">{p.count}</div>
                 <div className="text-3xl font-black text-zinc-900 dark:text-zinc-50 mb-1">{p.reward}</div>
                 <div className="text-xs text-zinc-500 dark:text-zinc-400">{p.note}</div>
+                {p.perks.length > 0 ? (
+                  <ul className="mt-4 space-y-1.5 text-left border-t border-zinc-100 dark:border-zinc-800 pt-4">
+                    {p.perks.map((perk) => (
+                      <li key={perk} className="flex items-start gap-1.5 text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                        <span className="text-emerald-500 mt-0.5 shrink-0">＋</span>
+                        <span>{perk}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </motion.div>
             ))}
           </div>
           <p className="text-center text-xs text-zinc-400 dark:text-zinc-500 mt-6 font-mono">
             * 云资源 / API 额度的最终金额与形式以与魔搭社区协商结果为准
+          </p>
+          <p className="text-center text-xs text-zinc-400 dark:text-zinc-500 mt-2 font-mono">
+            * 标「＋」的为合作方专项权益，按获奖团队每位有效成员发放，可与参赛普惠权益叠加，每队最多 3 人；以合作方最终确认为准
           </p>
         </div>
 
