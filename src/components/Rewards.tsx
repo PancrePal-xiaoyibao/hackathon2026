@@ -117,6 +117,12 @@ const partnerBenefits = [
         value: '等值 ¥539 / 人',
         desc: '获奖专项权益可与参赛普惠权益叠加。',
       },
+      {
+        scope: '三等奖团队（每位有效成员）',
+        title: 'Flash Pro 月度 Coding Plan',
+        value: '等值 ¥199 / 人',
+        desc: '获奖专项权益可与参赛普惠权益叠加。',
+      },
     ],
   },
 ];
