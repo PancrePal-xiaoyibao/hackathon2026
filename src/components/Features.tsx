@@ -75,7 +75,7 @@ export const Features: React.FC = () => {
               </div>
               <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-2">三阶段奖品激励</h3>
               <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                阶段 1 / 2 各发放 1 个 Vibecoding 键盘，阶段 3 发放 1 张 WAIC 门票，均含开发者采访。
+                阶段 1 发放 3 张 WAIC 单日票，阶段 2 / 3 各发放 1 个 Vibecoding 键盘，均含开发者采访。
               </p>
             </div>
           </motion.div>
