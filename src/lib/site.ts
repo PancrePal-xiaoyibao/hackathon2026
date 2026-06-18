@@ -44,7 +44,7 @@ export const SITE = {
   locale: 'zh_CN',
   ogImage: '/poster.png',
   bannerImage: '/banner.png',
-  registerUrl: env('NEXT_PUBLIC_REGISTER_URL', 'https://modelscope.cn/'),
+  registerUrl: env('NEXT_PUBLIC_REGISTER_URL', 'https://modelscope.cn/events/265/'),
   submissionUrls: {
     skill: env(
       'NEXT_PUBLIC_SKILL_SUBMIT_URL',
