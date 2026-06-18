@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Award, FileBadge, Github, Cloud, Ticket } from 'lucide-react';
+import { FileBadge, Github, Ticket, Keyboard, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/cn';
 
 interface RewardsProps {
@@ -15,7 +15,8 @@ const stagePrizes = [
     label: '阶段 1',
     date: '6/18 — 6/24',
     title: '🎯 最佳选题潜力奖',
-    reward: '1 张 WAIC 门票 + 开发者采访',
+    reward: '1 个 Vibecoding 键盘 + 开发者采访',
+    rewardIcon: 'keyboard',
     desc: '重点评估选题是否真实、有价值、可在短周期内落地。',
     color: 'amber',
   },
@@ -24,7 +25,8 @@ const stagePrizes = [
     label: '阶段 2',
     date: '6/25 — 7/1',
     title: '⚡ 最佳 MVP 原型奖',
-    reward: '1 张 WAIC 门票 + 开发者采访',
+    reward: '1 个 Vibecoding 键盘 + 开发者采访',
+    rewardIcon: 'keyboard',
     desc: '奖励最早把核心能力跑起来的队伍，必须能演示。',
     color: 'violet',
   },
@@ -34,38 +36,9 @@ const stagePrizes = [
     date: '7/2 — 7/8',
     title: '🌟 社区影响力奖',
     reward: '1 张 WAIC 门票 + 开发者采访',
+    rewardIcon: 'ticket',
     desc: '综合有效调用、收藏、评论质量、传播质量，异常流量剔除。',
     color: 'emerald',
-  },
-];
-
-const finalPrizes = [
-  {
-    rank: '一等奖',
-    icon: Trophy,
-    count: 'Top 3（3 名）',
-    reward: '1000 RMB',
-    note: '云资源或 API 额度',
-    accent: 'from-amber-400 to-orange-500',
-    iconColor: 'text-amber-500',
-  },
-  {
-    rank: '二等奖',
-    icon: Award,
-    count: 'Top 4 — 10（7 名）',
-    reward: '500 RMB',
-    note: '云资源或 API 额度',
-    accent: 'from-zinc-300 to-zinc-500',
-    iconColor: 'text-zinc-400',
-  },
-  {
-    rank: '三等奖',
-    icon: Award,
-    count: 'Top 11 — 20（10 名）',
-    reward: '100 RMB',
-    note: '云资源或 API 额度',
-    accent: 'from-orange-400 to-orange-700',
-    iconColor: 'text-orange-500',
   },
 ];
 
@@ -80,12 +53,6 @@ const criteria = [
 
 const extras = [
   {
-    icon: Cloud,
-    title: '资源支持',
-    desc: '获胜者将赢取丰厚的云资源或 API 额度，助力项目持续演进。',
-    audience: '获奖者',
-  },
-  {
     icon: FileBadge,
     title: '荣誉见证',
     desc: '所有完成提交的参与者均可获得官方电子参与证书。',
@@ -96,6 +63,61 @@ const extras = [
     title: '品牌曝光',
     desc: '优秀作品将上架 GitHub 与魔搭社区，获得全平台流量支持。',
     audience: '优秀作品',
+  },
+];
+
+const partnerBenefits = [
+  {
+    sponsor: 'KnowS',
+    sponsorRole: '医学循证 AI',
+    accent: 'from-violet-500 to-fuchsia-500',
+    border: 'border-violet-200 dark:border-violet-900/40',
+    items: [
+      {
+        scope: '通过审核团队',
+        title: '团队独立 API Key + 共享额度池',
+        value: '总价值 ¥10,000',
+        desc: '开放文献、指南、说明书、临床试验等检索能力，活动期间团队共同使用，自活动开始起生效。',
+      },
+      {
+        scope: '一等奖团队（每队最多 3 人）',
+        title: 'KnowS 专业版-3 倍积分年度会员',
+        value: '等值 ¥2,388 / 人',
+        desc: '获奖团队内每位有效成员额外获得 1 份。',
+      },
+      {
+        scope: '二等奖团队（每队最多 3 人）',
+        title: 'KnowS 专业版-1 倍积分年度会员',
+        value: '等值 ¥828 / 人',
+        desc: '获奖团队内每位有效成员额外获得 1 份。',
+      },
+    ],
+  },
+  {
+    sponsor: '阶跃星辰 StepFun',
+    sponsorRole: '大模型赞助',
+    accent: 'from-emerald-500 to-sky-500',
+    border: 'border-emerald-200 dark:border-emerald-900/40',
+    items: [
+      {
+        scope: '全员普惠（每位有效参赛选手）',
+        title: 'Flash Pro 月度套餐',
+        value: '等值 ¥199 / 人',
+        desc: '每位选手仅可加入 1 支队伍，并仅可领取 1 份普惠权益。',
+      },
+      {
+        scope: '一等奖团队（每位有效成员）',
+        title: 'Flash Max 季度套餐',
+        value: '等值 ¥1,889 / 人',
+        desc: '获奖专项权益可与参赛普惠权益叠加。',
+      },
+      {
+        scope: '二等奖团队（每位有效成员）',
+        title: 'Flash Pro 季度套餐',
+        value: '等值 ¥539 / 人',
+        desc: '获奖专项权益可与参赛普惠权益叠加。',
+      },
+    ],
   },
 ];
 
@@ -131,7 +153,7 @@ export const Rewards: React.FC<RewardsProps> = ({ isFullPage = false }) => {
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
-            既有阶段直通 WAIC 的荣耀，也有最终总评的丰厚云资源。我们尊重每一行有温度的代码。
+            既有阶段直通 WAIC 的荣耀，也有 KnowS 与 StepFun 提供的合作方专项权益。我们尊重每一行有温度的代码。
           </p>
         </div>
 
@@ -139,7 +161,7 @@ export const Rewards: React.FC<RewardsProps> = ({ isFullPage = false }) => {
         <div className="mb-20">
           <div className="text-center mb-8">
             <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-400 dark:text-zinc-600">
-              Stage Prizes · WAIC Tickets
+              Stage Prizes · 阶段奖
             </span>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -170,45 +192,17 @@ export const Rewards: React.FC<RewardsProps> = ({ isFullPage = false }) => {
                 </div>
                 <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2">{p.title}</h3>
                 <div className="flex items-center gap-2 mb-3">
-                  <Ticket size={14} className="text-zinc-500" />
+                  {p.rewardIcon === 'keyboard' ? (
+                    <Keyboard size={14} className="text-zinc-500" />
+                  ) : (
+                    <Ticket size={14} className="text-zinc-500" />
+                  )}
                   <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{p.reward}</span>
                 </div>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{p.desc}</p>
               </motion.div>
             ))}
           </div>
-        </div>
-
-        {/* Final Prizes */}
-        <div className="mb-20">
-          <div className="text-center mb-8">
-            <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-400 dark:text-zinc-600">
-              Final Awards · 7/15 公布
-            </span>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {finalPrizes.map((p, i) => (
-              <motion.div
-                key={p.rank}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="relative p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-900/40 backdrop-blur-md text-center"
-              >
-                <div className={cn('inline-flex p-3 rounded-full bg-gradient-to-br mb-4', p.accent)}>
-                  <p.icon size={24} className="text-white" />
-                </div>
-                <div className="text-sm text-zinc-500 dark:text-zinc-400 mb-1">{p.rank}</div>
-                <div className="text-xs font-mono text-zinc-400 dark:text-zinc-500 mb-3">{p.count}</div>
-                <div className="text-3xl font-black text-zinc-900 dark:text-zinc-50 mb-1">{p.reward}</div>
-                <div className="text-xs text-zinc-500 dark:text-zinc-400">{p.note}</div>
-              </motion.div>
-            ))}
-          </div>
-          <p className="text-center text-xs text-zinc-400 dark:text-zinc-500 mt-6 font-mono">
-            * 云资源 / API 额度的最终金额与形式以与魔搭社区协商结果为准
-          </p>
         </div>
 
         {/* Six-dimension scoring (full page) */}
@@ -245,6 +239,69 @@ export const Rewards: React.FC<RewardsProps> = ({ isFullPage = false }) => {
             </div>
           </div>
         ) : null}
+
+        {/* Partner Special Benefits · 合作方专项权益 */}
+        <div className="mb-20">
+          <div className="text-center mb-8">
+            <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-400 dark:text-zinc-600">
+              Partner Special Benefits · 合作方专项权益
+            </span>
+            <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+              本次黑客松最终奖励由合作方专项权益构成，覆盖参赛全员普惠与最终总评获奖团队。
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {partnerBenefits.map((p, i) => (
+              <motion.div
+                key={p.sponsor}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={cn(
+                  'relative p-6 rounded-2xl border bg-white/70 dark:bg-zinc-900/40 backdrop-blur-md',
+                  p.border,
+                )}
+              >
+                <div className="flex items-center gap-3 mb-5 pb-4 border-b border-zinc-100 dark:border-zinc-800">
+                  <div className={cn('inline-flex p-2.5 rounded-xl bg-gradient-to-br', p.accent)}>
+                    <Sparkles size={18} className="text-white" />
+                  </div>
+                  <div>
+                    <div className="text-base font-bold text-zinc-900 dark:text-zinc-100">{p.sponsor}</div>
+                    <div className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                      {p.sponsorRole}
+                    </div>
+                  </div>
+                </div>
+                <ul className="space-y-4">
+                  {p.items.map((item) => (
+                    <li key={item.title} className="flex gap-3">
+                      <div className="flex-shrink-0 mt-1 w-1.5 h-1.5 rounded-full bg-gradient-to-br from-zinc-400 to-zinc-600 dark:from-zinc-500 dark:to-zinc-300" />
+                      <div className="flex-1 min-w-0">
+                        <div className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-0.5">
+                          {item.scope}
+                        </div>
+                        <div className="flex items-baseline gap-2 flex-wrap mb-1">
+                          <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100">{item.title}</span>
+                          <span className={cn('text-xs font-mono font-semibold text-transparent bg-clip-text bg-gradient-to-r', p.accent)}>
+                            {item.value}
+                          </span>
+                        </div>
+                        <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">{item.desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-zinc-400 dark:text-zinc-500 mt-6 font-mono leading-relaxed max-w-3xl mx-auto px-4">
+            * 以上 KnowS 与 StepFun 专项权益由对应合作方单独提供，具体 API Key 发放形式、套餐名称、领取方式、有效期与使用规则以合作方最终确认为准。
+            <br />
+            * Sealos（FastGPT）提供的 RAG 能力与技术支持作为技术生态支持展示，不作为奖品或赞助权益发放。
+          </p>
+        </div>
 
         {/* Extras */}
         <div>

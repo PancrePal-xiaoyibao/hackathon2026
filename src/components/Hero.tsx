@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2, FileCode, Terminal, Wrench } from 'lucide-react';
-import FastGPTColor from '@lobehub/icons/es/FastGPT/components/Color';
 import ModelScopeColor from '@lobehub/icons/es/ModelScope/components/Color';
 import { Button, Badge } from './UIComponents';
 import { SITE } from '@/lib/site';
@@ -24,7 +23,7 @@ const heroSponsors: HeroSponsor[] = [
   { name: '魔搭 ModelScope', role: '联合主办', logoComponent: <ModelScopeColor size={28} /> },
   { name: 'KnowS', role: '医学循证 AI', logo: '/sponsor-knows.png', w: 336, h: 354 },
   { name: '阶跃星辰 StepFun', role: '大模型', logo: '/sponsor-stepfun.png', w: 889, h: 339 },
-  { name: 'FastGPT', role: 'RAG 知识库', logoComponent: <FastGPTColor size={28} /> },
+  { name: 'Sealos', role: '技术支持 · RAG', logo: '/sealos.svg', w: 40, h: 40 },
 ];
 
 export const Hero: React.FC = () => {
@@ -124,11 +123,11 @@ export const Hero: React.FC = () => {
             <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-zinc-500 dark:text-zinc-400 font-medium">
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-emerald-500" />
-                <span>WAIC 门票</span>
+                <span>WAIC 直通</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-emerald-500" />
-                <span>云资源额度</span>
+                <span>云资源 + 模型额度</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-emerald-500" />

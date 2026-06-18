@@ -22,7 +22,7 @@ const stages = [
     id: '01',
     title: '阶段 1 · 选题登记',
     date: '6 月 18 日 — 6 月 24 日',
-    desc: '登记选题并完成可行性说明。阶段结束评选「最佳选题潜力奖」，发放 1 张 WAIC 门票。',
+    desc: '登记选题并完成可行性说明。阶段结束评选「最佳选题潜力奖」，发放 1 个 Vibecoding 键盘 + 开发者采访。',
     icon: Target,
     color: 'amber',
     badge: '🎯 最佳选题潜力奖',
@@ -31,7 +31,7 @@ const stages = [
     id: '02',
     title: '阶段 2 · MVP 开发',
     date: '6 月 25 日 — 7 月 1 日',
-    desc: '提交可运行 MVP 原型。阶段结束评选「最佳 MVP 原型奖」，发放 1 张 WAIC 门票。',
+    desc: '提交可运行 MVP 原型。阶段结束评选「最佳 MVP 原型奖」，发放 1 个 Vibecoding 键盘 + 开发者采访。',
     icon: Zap,
     color: 'violet',
     badge: '⚡ 最佳 MVP 原型奖',
@@ -40,7 +40,7 @@ const stages = [
     id: '03',
     title: '阶段 3 · 社区共建',
     date: '7 月 2 日 — 7 月 8 日',
-    desc: '鼓励社区试用、反馈与传播。阶段结束评选「社区影响力奖」，发放 1 张 WAIC 门票。',
+    desc: '鼓励社区试用、反馈与传播。阶段结束评选「社区影响力奖」，发放 1 张 WAIC 门票 + 开发者采访。',
     icon: Users,
     color: 'emerald',
     badge: '🌟 社区影响力奖',
@@ -190,8 +190,8 @@ export const Process: React.FC<ProcessProps> = ({ isFullPage = false }) => {
               FAIRNESS RULES
             </div>
             <ul className="space-y-2 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed list-disc pl-5">
-              <li>每支队伍在整个比赛期间最多获得 1 次 WAIC 门票类奖励，已获票团队不再参与后续门票评选。</li>
-              <li>若某阶段最高分团队已获票，门票顺延至该阶段下一支未获票且符合资格的队伍。</li>
+              <li>每支队伍在整个比赛期间最多获得 1 次魔搭阶段奖（Vibecoding 键盘或 WAIC 门票），已获奖团队不再参与后续阶段奖评选。</li>
+              <li>若某阶段最高分团队已获奖，对应礼品顺延至该阶段下一支未获奖且符合资格的队伍。</li>
               <li>阶段获奖后 24 — 48 小时内完成 5 个问题的轻量采访，用于公众号 / 魔搭社区 / 活动页宣传。</li>
               <li>每人只能加入一队；同一核心成员、同一代码库视为同一参赛主体。</li>
               <li>允许历史项目参赛，但必须披露赛前已有部分，评审重点看比赛期间新增贡献。</li>

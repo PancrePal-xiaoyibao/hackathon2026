@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import FastGPTColor from '@lobehub/icons/es/FastGPT/components/Color';
 import ModelScopeColor from '@lobehub/icons/es/ModelScope/components/Color';
 
 interface Sponsor {
@@ -40,9 +39,11 @@ const sponsors: Sponsor[] = [
     height: 339,
   },
   {
-    name: 'FastGPT',
-    role: '合作方',
-    logoComponent: <FastGPTColor size={40} />,
+    name: 'Sealos',
+    role: '技术支持',
+    logo: '/sealos.svg',
+    width: 40,
+    height: 40,
   },
 ];
 
