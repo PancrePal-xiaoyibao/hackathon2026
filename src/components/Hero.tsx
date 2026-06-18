@@ -95,7 +95,7 @@ export const Hero: React.FC = () => {
                 {SITE.sloganEn}
               </p>
               <p className="max-w-xl mx-auto lg:mx-0 text-base md:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
-                聚焦医疗垂直领域，构建可复用的 <strong className="text-zinc-900 dark:text-zinc-100 font-semibold">Skills 或 MCP 扩展工具</strong>。三阶段冲刺，直通 WAIC 2026 上海。
+                聚焦医疗垂直领域，构建可复用的 <strong className="text-zinc-900 dark:text-zinc-100 font-semibold">Skills 或 MCP 扩展工具</strong>。三阶段冲刺，魔搭社区联合主办。
               </p>
             </div>
 
@@ -123,7 +123,7 @@ export const Hero: React.FC = () => {
             <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-zinc-500 dark:text-zinc-400 font-medium">
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-emerald-500" />
-                <span>WAIC 直通</span>
+                <span>阶段奖品</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-emerald-500" />
@@ -181,8 +181,8 @@ export const Hero: React.FC = () => {
                     <span className="font-mono font-bold text-rose-600 dark:text-rose-400">7/12 23:59</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-zinc-500 dark:text-zinc-400">WAIC 上海</span>
-                    <span className="font-mono font-bold text-emerald-600 dark:text-emerald-400">7/17 — 7/20</span>
+                    <span className="text-zinc-500 dark:text-zinc-400">结果公示</span>
+                    <span className="font-mono font-bold text-emerald-600 dark:text-emerald-400">7/15</span>
                   </div>
                 </div>
               </div>

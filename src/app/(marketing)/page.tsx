@@ -31,15 +31,6 @@ const eventJsonLd = {
       name: '魔搭 ModelScope 社区',
       url: 'https://modelscope.cn/',
     },
-    {
-      '@type': 'Place',
-      name: 'WAIC 2026 上海（赛果展示）',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: '上海',
-        addressCountry: 'CN',
-      },
-    },
   ],
   organizer: [
     {

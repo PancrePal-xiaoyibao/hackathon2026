@@ -73,9 +73,9 @@ export const Features: React.FC = () => {
               <div className="w-10 h-10 rounded-xl bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center text-violet-600 dark:text-violet-400 mb-4">
                 <Users size={20} />
               </div>
-              <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-2">直通 WAIC 2026</h3>
+              <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-2">三阶段奖品激励</h3>
               <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                阶段 1 / 2 各发放 1 个 Vibecoding 键盘，阶段 3 发放 1 张 WAIC 门票。获奖代表 7/17 — 7/20 上海现场展示。
+                阶段 1 / 2 各发放 1 个 Vibecoding 键盘，阶段 3 发放 1 张 WAIC 门票，均含开发者采访。
               </p>
             </div>
           </motion.div>

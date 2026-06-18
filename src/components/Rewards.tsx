@@ -153,7 +153,7 @@ export const Rewards: React.FC<RewardsProps> = ({ isFullPage = false }) => {
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
-            既有阶段直通 WAIC 的荣耀，也有 KnowS 与 StepFun 提供的合作方专项权益。我们尊重每一行有温度的代码。
+            既有阶段直通的实物激励，也有 KnowS 与 StepFun 提供的合作方专项权益。我们尊重每一行有温度的代码。
           </p>
         </div>
 

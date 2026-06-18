@@ -69,14 +69,6 @@ const stages = [
     icon: Trophy,
     color: 'amber',
   },
-  {
-    id: '07',
-    title: 'WAIC 赛果展示',
-    date: '7 月 17 日 — 7 月 20 日',
-    desc: '获奖代表于上海 WAIC 大会现场做赛果展示。',
-    icon: Sparkles,
-    color: 'fuchsia',
-  },
 ];
 
 const colorMap: Record<string, { dot: string; text: string; border: string }> = {
@@ -125,7 +117,7 @@ export const Process: React.FC<ProcessProps> = ({ isFullPage = false }) => {
             赛程安排 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-violet-500 to-fuchsia-500">.Schedule</span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
-            为期近四周（6 月 18 日 — 7 月 12 日），节奏紧凑，三个阶段里程碑直通 WAIC 2026。
+            为期近四周（6 月 18 日 — 7 月 12 日），节奏紧凑，三个阶段里程碑层层推进。
           </p>
         </div>
 

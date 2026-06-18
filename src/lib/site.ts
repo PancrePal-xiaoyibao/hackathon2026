@@ -22,7 +22,7 @@ export const SITE = {
   slogan: '光已成炬，照亮崎岖',
   sloganEn: 'Light Turns Into Torches, Illuminating the Rugged Path',
   description:
-    '小X宝开源医疗社区 × 魔搭 ModelScope 联合主办。聚焦医疗垂直领域，构建可复用的 Skills 或 MCP 扩展工具。6 月 18 日 — 7 月 12 日，三阶段冲刺，直通 WAIC 2026。',
+    '小X宝开源医疗社区 × 魔搭 ModelScope 联合主办。聚焦医疗垂直领域，构建可复用的 Skills 或 MCP 扩展工具。6 月 18 日 — 7 月 12 日，三阶段冲刺。',
   keywords: [
     '小X宝开源医疗社区',
     '医疗黑客松',
@@ -34,7 +34,6 @@ export const SITE = {
     'StepFun 阶跃星辰',
     'Sealos',
     'FastGPT',
-    'WAIC 2026',
     '开源医疗',
     '医疗 AI',
     '罕见病',
@@ -67,8 +66,6 @@ export const SITE = {
     start: '2026-06-18',
     end: '2026-07-12',
     finalAnnounce: '2026-07-15',
-    waicStart: '2026-07-17',
-    waicEnd: '2026-07-20',
   },
 } as const;
 
