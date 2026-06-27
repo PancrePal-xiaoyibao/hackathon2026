@@ -12,3 +12,19 @@ export interface NavItem {
   label: string;
   href: string;
 }
+
+export type CandidateKind = 'Studio' | 'MCP' | 'Agent Skill';
+
+export interface Candidate {
+  candidateId: string;
+  team: string;
+  kind: CandidateKind;
+  displayName: string;
+  category: string;
+  summary: string;
+  highlights: string;
+  audience: string;
+  link: string;
+  altLink?: { label: string; url: string };
+  linkAvailable: boolean;
+}

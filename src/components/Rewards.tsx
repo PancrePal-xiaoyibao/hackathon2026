@@ -15,7 +15,7 @@ const stagePrizes = [
     label: '阶段 1',
     date: '6/18 — 6/24',
     title: '🎯 最佳选题潜力奖',
-    reward: '3 张 WAIC 单日票 + 开发者采访',
+    reward: 'WAIC世界人工智能大会门票x1-3张 + 开发者采访',
     rewardIcon: 'ticket',
     desc: '重点评估选题是否真实、有价值、可在短周期内落地。',
     color: 'amber',

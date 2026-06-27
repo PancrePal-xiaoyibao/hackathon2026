@@ -45,6 +45,7 @@ export const SITE = {
   ogImage: '/poster.png',
   bannerImage: '/banner.png',
   registerUrl: env('NEXT_PUBLIC_REGISTER_URL', 'https://modelscope.cn/events/265/'),
+  voteUrl: env('NEXT_PUBLIC_VOTE_URL', 'https://uei55ql5ok.feishu.cn/share/base/form/shrcnTkrTCC1jK9lQdmrHtqnrbd'),
   submissionUrls: {
     skill: env(
       'NEXT_PUBLIC_SKILL_SUBMIT_URL',
@@ -71,6 +72,7 @@ export const SITE = {
 
 export const NAV_ITEMS = [
   { id: 'wishes', label: '赛题方向', href: '/wishes' },
+  { id: 'showcase', label: '作品投票', href: '/showcase' },
   { id: 'process', label: '赛程安排', href: '/process' },
   { id: 'prizes', label: '奖励体系', href: '/prizes' },
   { id: 'submit', label: '提交规范', href: '/submit' },
