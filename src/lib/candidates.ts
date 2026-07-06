@@ -1,6 +1,6 @@
 import type { Candidate } from '@/types';
 
-// 数据来源：小x宝2026黑客松_最佳选题统计与问卷设计.xlsx「项目描述」表，原样保留 12 条参赛作品。
+// 数据来源：小x宝2026黑客松比赛表格_比赛成果管理_表格.xlsx「比赛成果管理」表（2026-07-06 同步）。
 export const CANDIDATES: Candidate[] = [
   {
     candidateId: 'C01',
@@ -139,7 +139,7 @@ export const CANDIDATES: Candidate[] = [
     highlights:
       '访问 http://yuppiez/healthcare 时 DNS 无法解析；从报名电话看可能与 yuppiez 相关，但无法确认项目目标、功能和完成度。',
     audience: '待作者补充公开链接后再判断。',
-    link: 'http://yuppiez/healthcare',
+    link: 'yuppiez/healthcare',
     linkAvailable: false,
   },
   {
@@ -154,6 +154,77 @@ export const CANDIDATES: Candidate[] = [
       '提供 /api/v1/search 和 quick search；支持证据等级筛选、年份范围、中文/英文标题和摘要、临床意义、相关度、证据分布统计、智能摘要与 clinical takeaway。',
     audience: '医学研究者、临床问题检索者、医学内容审核者、循证医学学习者。',
     link: 'https://gsym236998-medevidence-ai.ms.show',
+    linkAvailable: true,
+  },
+  {
+    candidateId: 'C12',
+    team: '王刚',
+    kind: 'Studio',
+    displayName: '面向患者的疑难病症研究成果通俗化解释 Agent',
+    category: '患者教育 / 疑难病症科普',
+    summary:
+      '将疑难病症相关研究成果转化为患者可理解的通俗解释，帮助患者和家属读懂复杂医学信息。',
+    highlights:
+      '面向患者视角做研究成果通俗化转述；降低专业文献阅读门槛，辅助患者理解病情与前沿进展。',
+    audience: '疑难病症患者和家属、患者导航志愿者、医学科普场景。',
+    link: 'https://modelscope.cn/studios/johamwon/patienceai',
+    linkAvailable: true,
+  },
+  {
+    candidateId: 'C13',
+    team: '襄阳上河杏坛教育科技有限公司',
+    kind: 'Agent Skill',
+    displayName: '罕见病辅助诊断系统',
+    category: '罕见病诊断辅助 / 循证检索',
+    summary:
+      '面向医生和患者的罕见病初步诊断辅助工具，结合症状描述提升诊断效率与准确率。',
+    highlights:
+      '支持基于 KnowS 的医学循证证据检索；输入症状描述生成辅助诊断参考；同时提供 ModelScope Skill 与 GitHub 仓库。',
+    audience: '临床医生、罕见病患者和家属、医学研究员、遗传病研究场景。',
+    link: 'https://modelscope.cn/skills/xiaopch/rare-disease-diagnosis',
+    altLink: { label: 'GitHub 仓库', url: 'https://github.com/xiaopch/rare-disease-diagnosis' },
+    linkAvailable: true,
+  },
+  {
+    candidateId: 'C14',
+    team: '行稳致远队',
+    kind: 'Studio',
+    displayName: 'PharmaGuard 药品过敏风险评估',
+    category: '用药安全 / 过敏风险筛查',
+    summary:
+      '面向用药场景的药品过敏风险评估工具，帮助识别潜在过敏风险。',
+    highlights:
+      '聚焦药品过敏风险评估；以 Studio 形式提供交互式体验，辅助用药前风险判断。',
+    audience: '患者、家庭照护者、基层医疗人员、用药安全科普场景。',
+    link: 'https://modelscope.cn/studios/xihuyisheng/PharmaGuard',
+    linkAvailable: true,
+  },
+  {
+    candidateId: 'C15',
+    team: '20181313zhang',
+    kind: 'Studio',
+    displayName: '多病历纵向罕见病筛查鉴别工具',
+    category: '罕见病筛查 / 病历纵向分析',
+    summary:
+      '基于多份病历的纵向分析，辅助罕见病筛查与鉴别诊断。',
+    highlights:
+      '聚焦多病历纵向数据整合与罕见病筛查鉴别；当前报名未提供公开作品链接，待作者补充。',
+    audience: '临床医生、罕见病筛查场景、病历资料整理与随访管理场景。',
+    link: '',
+    linkAvailable: false,
+  },
+  {
+    candidateId: 'C16',
+    team: '守望者',
+    kind: 'Studio',
+    displayName: '化疗后居家指标风险识别系统',
+    category: '肿瘤随访 / 居家监测',
+    summary:
+      '面向化疗后居家场景的指标风险识别系统，帮助患者和照护者及时发现异常信号。',
+    highlights:
+      '聚焦化疗后居家指标监测与风险识别；以 Studio 形式提供交互式居家随访辅助体验。',
+    audience: '肿瘤患者和家属、化疗后居家照护者、肿瘤随访管理场景。',
+    link: 'https://modelscope.cn/studios/Zachary912/chemo-home-monitor',
     linkAvailable: true,
   },
 ];
