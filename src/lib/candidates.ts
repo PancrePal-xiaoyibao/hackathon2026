@@ -208,10 +208,10 @@ export const CANDIDATES: Candidate[] = [
     summary:
       '基于多份病历的纵向分析，辅助罕见病筛查与鉴别诊断。',
     highlights:
-      '聚焦多病历纵向数据整合与罕见病筛查鉴别；当前报名未提供公开作品链接，待作者补充。',
+      '聚焦多病历纵向数据整合与罕见病筛查鉴别；支持多份病历时间线对比，辅助罕见病早期识别与鉴别。',
     audience: '临床医生、罕见病筛查场景、病历资料整理与随访管理场景。',
-    link: '',
-    linkAvailable: false,
+    link: 'https://www.modelscope.cn/studios/z20181313zhang/Rare_Disease_Tool',
+    linkAvailable: true,
   },
   {
     candidateId: 'C16',
