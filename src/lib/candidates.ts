@@ -18,16 +18,20 @@ export const CANDIDATES: Candidate[] = [
   },
   {
     candidateId: 'C02',
-    team: 'yuppiez99999',
-    kind: 'MCP',
-    displayName: '医疗数据质量评估 MCP Tool',
-    category: '医疗数据治理 / 医疗 AI 质控',
+    team: 'yuppiez99999 / 安然',
+    kind: 'Studio',
+    displayName: 'yuppiez Healthcare 医疗健康应用',
+    category: '医疗健康 / 医疗数据治理',
     summary:
-      '基于 MCP 的医疗数据质量评估与循证辅助工具，为医疗 AI 训练数据提供质量评分和分类。',
+      '面向医疗健康场景的 AI 应用，涵盖数据质量评估、循证辅助与交互式 Studio 体验。',
     highlights:
-      '提供 4 维度评分（完整性、准确性、时效性、合规性）、8 科室自动分类、质量报告、相似数据检索和循证文献支持；强调脱敏 Token 数据与合规声明。',
+      '提供医疗数据 4 维度质量评分（完整性、准确性、时效性、合规性）、8 科室自动分类、质量报告与循证文献支持；同时提供 GitHub 仓库与 ModelScope MCP 服务版本。',
     audience: '医疗机构数据部门、医疗 AI 研发团队、医学数据研究员、数据交易/登记机构。',
-    link: 'https://github.com/yuppiez99999/-MCP-Tool-Medical-Data-QA-MCP-',
+    link: 'https://www.modelscope.cn/studios/yuppiez/healthcare',
+    altLink: {
+      label: 'GitHub MCP 仓库',
+      url: 'https://github.com/yuppiez99999/-MCP-Tool-Medical-Data-QA-MCP-',
+    },
     linkAvailable: true,
   },
   {
@@ -144,19 +148,6 @@ export const CANDIDATES: Candidate[] = [
   },
   {
     candidateId: 'C11',
-    team: '安然',
-    kind: 'MCP',
-    displayName: 'yuppiez/healthcare（待补链）',
-    category: '待确认',
-    summary: '当前链接为本地域名或占位符，无法解析公开项目信息。',
-    highlights:
-      '访问 http://yuppiez/healthcare 时 DNS 无法解析；从报名电话看可能与 yuppiez 相关，但无法确认项目目标、功能和完成度。',
-    audience: '待作者补充公开链接后再判断。',
-    link: 'yuppiez/healthcare',
-    linkAvailable: false,
-  },
-  {
-    candidateId: 'C12',
     team: 'MedEvidence A',
     kind: 'Agent Skill',
     displayName: 'MedEvidence AI',
@@ -170,7 +161,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C13',
+    candidateId: 'C12',
     team: '王刚',
     kind: 'Studio',
     displayName: '面向患者的疑难病症研究成果通俗化解释 Agent',
@@ -184,7 +175,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C14',
+    candidateId: 'C13',
     team: '襄阳上河杏坛教育科技有限公司',
     kind: 'Agent Skill',
     displayName: '罕见病辅助诊断系统',
@@ -198,7 +189,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C15',
+    candidateId: 'C14',
     team: '襄阳上河杏坛教育科技有限公司',
     kind: 'Agent Skill',
     displayName: '罕见病辅助诊断系统（GitHub）',
@@ -212,7 +203,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C16',
+    candidateId: 'C15',
     team: '行稳致远队',
     kind: 'Studio',
     displayName: 'PharmaGuard 药品过敏风险评估',
@@ -226,7 +217,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C17',
+    candidateId: 'C16',
     team: '20181313zhang',
     kind: 'Studio',
     displayName: '多病历纵向罕见病筛查鉴别工具',
@@ -240,7 +231,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: false,
   },
   {
-    candidateId: 'C18',
+    candidateId: 'C17',
     team: '守望者',
     kind: 'Studio',
     displayName: '化疗后居家指标风险识别系统',
@@ -254,7 +245,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C19',
+    candidateId: 'C18',
     team: '小胰宝老登队',
     kind: 'Agent Skill',
     displayName: 'DICOM 医学影像下载技能',
