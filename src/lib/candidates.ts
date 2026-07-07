@@ -1,6 +1,6 @@
 import type { Candidate } from '@/types';
 
-// 数据来源：小x宝2026黑客松比赛表格_比赛成果管理_表格.xlsx「比赛成果管理」表（2026-07-06 同步）。
+// 数据来源：小x宝2026黑客松比赛表格_比赛成果管理_表格 (4).xlsx「比赛成果管理」表（2026-07-07 同步）。
 export const CANDIDATES: Candidate[] = [
   {
     candidateId: 'C01',
@@ -18,21 +18,34 @@ export const CANDIDATES: Candidate[] = [
   },
   {
     candidateId: 'C02',
-    team: 'yuppiez99999 / yuppiez',
+    team: 'yuppiez99999',
     kind: 'MCP',
     displayName: '医疗数据质量评估 MCP Tool',
     category: '医疗数据治理 / 医疗 AI 质控',
     summary:
       '基于 MCP 的医疗数据质量评估与循证辅助工具，为医疗 AI 训练数据提供质量评分和分类。',
     highlights:
-      '提供 4 维度评分（完整性、准确性、时效性、合规性）、8 科室自动分类、质量报告、相似数据检索和循证文献支持；强调脱敏 Token 数据与合规声明。同时提供 GitHub 仓库与 ModelScope MCP 服务展示链接。',
+      '提供 4 维度评分（完整性、准确性、时效性、合规性）、8 科室自动分类、质量报告、相似数据检索和循证文献支持；强调脱敏 Token 数据与合规声明。',
     audience: '医疗机构数据部门、医疗 AI 研发团队、医学数据研究员、数据交易/登记机构。',
     link: 'https://github.com/yuppiez99999/-MCP-Tool-Medical-Data-QA-MCP-',
-    altLink: { label: 'ModelScope MCP 服务', url: 'https://modelscope.cn/mcp/servers/yuppiez/leo' },
     linkAvailable: true,
   },
   {
     candidateId: 'C03',
+    team: 'yuppiez',
+    kind: 'MCP',
+    displayName: '医疗数据质量评估 MCP 服务（ModelScope）',
+    category: '医疗数据治理 / 医疗 AI 质控',
+    summary:
+      '医疗数据质量评估 MCP 服务的 ModelScope 托管版本，便于在魔搭生态中直接接入与体验。',
+    highlights:
+      '与 GitHub 版同源的医疗数据质量评估能力；通过 ModelScope MCP 服务形式发布，支持在 Agent 工作流中快速集成数据质控与循证辅助。',
+    audience: '医疗机构数据部门、医疗 AI 研发团队、ModelScope MCP 生态开发者。',
+    link: 'https://modelscope.cn/mcp/servers/yuppiez/leo',
+    linkAvailable: true,
+  },
+  {
+    candidateId: 'C04',
     team: '小胰宝老登',
     kind: 'Agent Skill',
     displayName: 'NCCN 官方指南和患者手册下载技能',
@@ -46,7 +59,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C04',
+    candidateId: 'C05',
     team: '小胰宝老登',
     kind: 'Agent Skill',
     displayName: 'ClinicalTrials 肿瘤临床试验情报技能',
@@ -60,7 +73,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C05',
+    candidateId: 'C06',
     team: '小胰宝老登',
     kind: 'Agent Skill',
     displayName: 'FastGPT 内容处理器',
@@ -74,13 +87,13 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C06',
+    candidateId: 'C07',
     team: '科研虾',
     kind: 'Agent Skill',
     displayName: '肿瘤文献综述助手 LifeScience Research Copilot',
     category: '科研综述 / 循证检索',
     summary:
-      '输入“基因/突变 x 癌种 x 研究问题”，自动生成带真实 PMID/NCT 溯源的结构化中文综述。',
+      '输入"基因/突变 x 癌种 x 研究问题"，自动生成带真实 PMID/NCT 溯源的结构化中文综述。',
     highlights:
       '检索 PubMed/Europe PMC 最新文献和 ClinicalTrials.gov 在研试验，输出 Markdown/HTML/PDF；强调引用注册表和零幻觉校验。',
     audience: '肿瘤科研人员、医学生、课题调研人员、患者社群医学志愿者。',
@@ -88,7 +101,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C07',
+    candidateId: 'C08',
     team: '猫狗乐翻天',
     kind: 'Studio',
     displayName: '小药安 MedSafe Copilot',
@@ -102,7 +115,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C08',
+    candidateId: 'C09',
     team: '小图宝lihb',
     kind: 'Agent Skill',
     displayName: '医学检测报告格式化器',
@@ -116,7 +129,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C09',
+    candidateId: 'C10',
     team: '小x宝老登',
     kind: 'Agent Skill',
     displayName: '智能病案整理助手 Patient Record Organizer',
@@ -130,7 +143,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C10',
+    candidateId: 'C11',
     team: '安然',
     kind: 'MCP',
     displayName: 'yuppiez/healthcare（待补链）',
@@ -143,7 +156,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: false,
   },
   {
-    candidateId: 'C11',
+    candidateId: 'C12',
     team: 'MedEvidence A',
     kind: 'Agent Skill',
     displayName: 'MedEvidence AI',
@@ -157,7 +170,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C12',
+    candidateId: 'C13',
     team: '王刚',
     kind: 'Studio',
     displayName: '面向患者的疑难病症研究成果通俗化解释 Agent',
@@ -171,7 +184,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C13',
+    candidateId: 'C14',
     team: '襄阳上河杏坛教育科技有限公司',
     kind: 'Agent Skill',
     displayName: '罕见病辅助诊断系统',
@@ -179,14 +192,27 @@ export const CANDIDATES: Candidate[] = [
     summary:
       '面向医生和患者的罕见病初步诊断辅助工具，结合症状描述提升诊断效率与准确率。',
     highlights:
-      '支持基于 KnowS 的医学循证证据检索；输入症状描述生成辅助诊断参考；同时提供 ModelScope Skill 与 GitHub 仓库。',
+      '支持基于 KnowS 的医学循证证据检索；输入症状描述生成辅助诊断参考；提供 ModelScope Skill 版本。',
     audience: '临床医生、罕见病患者和家属、医学研究员、遗传病研究场景。',
     link: 'https://modelscope.cn/skills/xiaopch/rare-disease-diagnosis',
-    altLink: { label: 'GitHub 仓库', url: 'https://github.com/xiaopch/rare-disease-diagnosis' },
     linkAvailable: true,
   },
   {
-    candidateId: 'C14',
+    candidateId: 'C15',
+    team: '襄阳上河杏坛教育科技有限公司',
+    kind: 'Agent Skill',
+    displayName: '罕见病辅助诊断系统（GitHub）',
+    category: '罕见病诊断辅助 / 循证检索',
+    summary:
+      '罕见病辅助诊断系统的开源仓库版本，便于开发者本地部署与二次开发。',
+    highlights:
+      '与 ModelScope Skill 版同源的罕见病辅助诊断能力；开源代码托管于 GitHub，支持本地集成与定制扩展。',
+    audience: '开发者、医学 AI 研发团队、罕见病研究场景。',
+    link: 'https://github.com/xiaopch/rare-disease-diagnosis',
+    linkAvailable: true,
+  },
+  {
+    candidateId: 'C16',
     team: '行稳致远队',
     kind: 'Studio',
     displayName: 'PharmaGuard 药品过敏风险评估',
@@ -200,7 +226,7 @@ export const CANDIDATES: Candidate[] = [
     linkAvailable: true,
   },
   {
-    candidateId: 'C15',
+    candidateId: 'C17',
     team: '20181313zhang',
     kind: 'Studio',
     displayName: '多病历纵向罕见病筛查鉴别工具',
@@ -208,13 +234,13 @@ export const CANDIDATES: Candidate[] = [
     summary:
       '基于多份病历的纵向分析，辅助罕见病筛查与鉴别诊断。',
     highlights:
-      '聚焦多病历纵向数据整合与罕见病筛查鉴别；支持多份病历时间线对比，辅助罕见病早期识别与鉴别。',
+      '聚焦多病历纵向数据整合与罕见病筛查鉴别；支持多份病历时间线对比，辅助罕见病早期识别与鉴别。当前表格中作品链接为文字描述，待作者补充可访问的公开链接。',
     audience: '临床医生、罕见病筛查场景、病历资料整理与随访管理场景。',
-    link: 'https://www.modelscope.cn/studios/z20181313zhang/Rare_Disease_Tool',
-    linkAvailable: true,
+    link: '多病历纵向罕见病筛查鉴别工具',
+    linkAvailable: false,
   },
   {
-    candidateId: 'C16',
+    candidateId: 'C18',
     team: '守望者',
     kind: 'Studio',
     displayName: '化疗后居家指标风险识别系统',
@@ -225,6 +251,20 @@ export const CANDIDATES: Candidate[] = [
       '聚焦化疗后居家指标监测与风险识别；以 Studio 形式提供交互式居家随访辅助体验。',
     audience: '肿瘤患者和家属、化疗后居家照护者、肿瘤随访管理场景。',
     link: 'https://modelscope.cn/studios/Zachary912/chemo-home-monitor',
+    linkAvailable: true,
+  },
+  {
+    candidateId: 'C19',
+    team: '小胰宝老登队',
+    kind: 'Agent Skill',
+    displayName: 'DICOM 医学影像下载技能',
+    category: '医学影像 / DICOM 数据获取',
+    summary:
+      '面向肿瘤诊疗场景的 DICOM 医学影像下载 Agent Skill，帮助患者和研究者便捷获取影像数据。',
+    highlights:
+      '支持 DICOM 格式医学影像的检索与下载；与小胰宝系列患者工具协同，辅助影像资料归档与远程会诊准备。',
+    audience: '肿瘤患者和家属、影像科医生、医学 AI 数据准备场景。',
+    link: 'https://modelscope.cn/skills/Opencare/xyb_dicom_download_skills/summary',
     linkAvailable: true,
   },
 ];
