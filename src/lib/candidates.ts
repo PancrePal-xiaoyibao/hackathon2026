@@ -1,6 +1,6 @@
 import type { Candidate } from '@/types';
 
-// 数据来源：小x宝2026黑客松比赛表格_比赛成果管理_表格 (4).xlsx「比赛成果管理」表（2026-07-07 同步）。
+// 数据来源：小x宝2026黑客松比赛表格_比赛成果管理_表格 (6).xlsx「比赛成果管理」表（2026-07-08 同步）。
 export const CANDIDATES: Candidate[] = [
   {
     candidateId: 'C01',
@@ -14,28 +14,24 @@ export const CANDIDATES: Candidate[] = [
       '支持语音/文字/图片输入；提供红黄绿智能分诊、院前急救指导、AED/医院定位、急救知识/视频/药物查询；接入 KnowS 做循证知识验证。',
     audience: '社区居民、家庭照护者、志愿者、基层急救培训场景。',
     link: 'https://adambear-rescue-agent.ms.show/',
-    linkAvailable: true,
+    linkAvailable: false,
   },
   {
     candidateId: 'C02',
-    team: 'yuppiez99999 / 安然',
-    kind: 'Studio',
+    team: '安然',
+    kind: 'MCP',
     displayName: 'yuppiez Healthcare 医疗健康应用',
     category: '医疗健康 / 医疗数据治理',
     summary:
       '面向医疗健康场景的 AI 应用，涵盖数据质量评估、循证辅助与交互式 Studio 体验。',
     highlights:
-      '提供医疗数据 4 维度质量评分（完整性、准确性、时效性、合规性）、8 科室自动分类、质量报告与循证文献支持；同时提供 GitHub 仓库与 ModelScope MCP 服务版本。',
+      '提供医疗数据 4 维度质量评分（完整性、准确性、时效性、合规性）、8 科室自动分类、质量报告与循证文献支持；同时提供 GitHub MCP 仓库。',
     audience: '医疗机构数据部门、医疗 AI 研发团队、医学数据研究员、数据交易/登记机构。',
     link: 'https://www.modelscope.cn/studios/yuppiez/healthcare',
     altLinks: [
       {
         label: 'GitHub MCP 仓库',
         url: 'https://github.com/yuppiez99999/-MCP-Tool-Medical-Data-QA-MCP-',
-      },
-      {
-        label: 'ModelScope MCP 服务',
-        url: 'https://modelscope.cn/mcp/servers/yuppiez/leo',
       },
     ],
     linkAvailable: true,
@@ -175,23 +171,15 @@ export const CANDIDATES: Candidate[] = [
     summary:
       '面向医生和患者的罕见病初步诊断辅助工具，结合症状描述提升诊断效率与准确率。',
     highlights:
-      '支持基于 KnowS 的医学循证证据检索；输入症状描述生成辅助诊断参考；提供 ModelScope Skill 版本。',
+      '支持基于 KnowS 的医学循证证据检索；输入症状描述生成辅助诊断参考；提供 ModelScope Skill 与 GitHub 开源仓库。',
     audience: '临床医生、罕见病患者和家属、医学研究员、遗传病研究场景。',
     link: 'https://modelscope.cn/skills/xiaopch/rare-disease-diagnosis',
-    linkAvailable: true,
-  },
-  {
-    candidateId: 'C14',
-    team: '襄阳上河杏坛教育科技有限公司',
-    kind: 'Agent Skill',
-    displayName: '罕见病辅助诊断系统（GitHub）',
-    category: '罕见病诊断辅助 / 循证检索',
-    summary:
-      '罕见病辅助诊断系统的开源仓库版本，便于开发者本地部署与二次开发。',
-    highlights:
-      '与 ModelScope Skill 版同源的罕见病辅助诊断能力；开源代码托管于 GitHub，支持本地集成与定制扩展。',
-    audience: '开发者、医学 AI 研发团队、罕见病研究场景。',
-    link: 'https://github.com/xiaopch/rare-disease-diagnosis',
+    altLinks: [
+      {
+        label: 'GitHub 仓库',
+        url: 'https://github.com/xiaopch/rare-disease-diagnosis',
+      },
+    ],
     linkAvailable: true,
   },
   {
@@ -217,10 +205,10 @@ export const CANDIDATES: Candidate[] = [
     summary:
       '基于多份病历的纵向分析，辅助罕见病筛查与鉴别诊断。',
     highlights:
-      '聚焦多病历纵向数据整合与罕见病筛查鉴别；支持多份病历时间线对比，辅助罕见病早期识别与鉴别。当前表格中作品链接为文字描述，待作者补充可访问的公开链接。',
+      '聚焦多病历纵向数据整合与罕见病筛查鉴别；支持多份病历时间线对比，辅助罕见病早期识别与鉴别。',
     audience: '临床医生、罕见病筛查场景、病历资料整理与随访管理场景。',
     link: 'https://www.modelscope.cn/studios/z20181313zhang/Rare_Disease_Tool',
-    linkAvailable: true,
+    linkAvailable: false,
   },
   {
     candidateId: 'C17',
@@ -248,6 +236,40 @@ export const CANDIDATES: Candidate[] = [
       '支持 DICOM 格式医学影像的检索与下载；与小胰宝系列患者工具协同，辅助影像资料归档与远程会诊准备。',
     audience: '肿瘤患者和家属、影像科医生、医学 AI 数据准备场景。',
     link: 'https://modelscope.cn/skills/Opencare/xyb_dicom_download_skills/summary',
+    linkAvailable: true,
+  },
+  {
+    candidateId: 'C19',
+    team: '蓝马甲陪护护航小队',
+    kind: 'MCP',
+    displayName: '蓝马甲陪护护航 MCP 服务',
+    category: '陪护照护 / 就医导航',
+    summary:
+      '面向住院陪护与就医护航场景的 MCP 服务，便于在 Agent 工作流中接入陪护咨询与就医辅助相关工具能力。',
+    highlights:
+      '以 ModelScope MCP 服务形式发布；支持 Agent 工作流集成陪护护航工具调用，辅助患者家属与陪护场景下的信息查询与流程辅助。',
+    audience: '陪护服务人员、患者家属、就医导航志愿者、医疗 AI Agent 开发者。',
+    link: 'https://www.modelscope.cn/mcp/servers/YangLiu4525/blue-vest-caregiver-mcp',
+    linkAvailable: true,
+  },
+  {
+    candidateId: 'C20',
+    team: '9527',
+    kind: 'Studio',
+    displayName: 'rare-dx 罕见病诊断辅助系统',
+    category: '罕见病诊断辅助 / 临床推理',
+    summary:
+      '面向遗传科、儿科与内科执业医师的罕见病诊断辅助系统，将临床鉴别诊断推理形式化为五层递进分析。',
+    highlights:
+      '五层推理引擎（表型分析、贝叶斯假设、时序推理、遗传推理、诊断路径规划）；集成 KnowS 多源循证证据；含 11,606 个 HPO 术语与贝叶斯概率推理；提供 Studio 体验与 GitHub 开源仓库。',
+    audience: '遗传科/儿科/内科临床医生、罕见病筛查场景、医学 AI 研发团队。',
+    link: 'https://www.modelscope.cn/studios/zhangsan0226/rare-dx',
+    altLinks: [
+      {
+        label: 'GitHub 仓库',
+        url: 'https://github.com/healer2216/rare-dx',
+      },
+    ],
     linkAvailable: true,
   },
 ];
