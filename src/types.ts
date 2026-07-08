@@ -25,6 +25,6 @@ export interface Candidate {
   highlights: string;
   audience: string;
   link: string;
-  altLink?: { label: string; url: string };
+  altLinks?: { label: string; url: string }[];
   linkAvailable: boolean;
 }

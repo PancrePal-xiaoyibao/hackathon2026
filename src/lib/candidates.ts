@@ -28,24 +28,16 @@ export const CANDIDATES: Candidate[] = [
       '提供医疗数据 4 维度质量评分（完整性、准确性、时效性、合规性）、8 科室自动分类、质量报告与循证文献支持；同时提供 GitHub 仓库与 ModelScope MCP 服务版本。',
     audience: '医疗机构数据部门、医疗 AI 研发团队、医学数据研究员、数据交易/登记机构。',
     link: 'https://www.modelscope.cn/studios/yuppiez/healthcare',
-    altLink: {
-      label: 'GitHub MCP 仓库',
-      url: 'https://github.com/yuppiez99999/-MCP-Tool-Medical-Data-QA-MCP-',
-    },
-    linkAvailable: true,
-  },
-  {
-    candidateId: 'C03',
-    team: 'yuppiez',
-    kind: 'MCP',
-    displayName: '医疗数据质量评估 MCP 服务（ModelScope）',
-    category: '医疗数据治理 / 医疗 AI 质控',
-    summary:
-      '医疗数据质量评估 MCP 服务的 ModelScope 托管版本，便于在魔搭生态中直接接入与体验。',
-    highlights:
-      '与 GitHub 版同源的医疗数据质量评估能力；通过 ModelScope MCP 服务形式发布，支持在 Agent 工作流中快速集成数据质控与循证辅助。',
-    audience: '医疗机构数据部门、医疗 AI 研发团队、ModelScope MCP 生态开发者。',
-    link: 'https://modelscope.cn/mcp/servers/yuppiez/leo',
+    altLinks: [
+      {
+        label: 'GitHub MCP 仓库',
+        url: 'https://github.com/yuppiez99999/-MCP-Tool-Medical-Data-QA-MCP-',
+      },
+      {
+        label: 'ModelScope MCP 服务',
+        url: 'https://modelscope.cn/mcp/servers/yuppiez/leo',
+      },
+    ],
     linkAvailable: true,
   },
   {

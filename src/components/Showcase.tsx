@@ -126,17 +126,18 @@ function CandidateCard({ c, index }: { c: Candidate; index: number }) {
               查看作品
               <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
-            {c.altLink ? (
+            {c.altLinks?.map((alt) => (
               <a
-                href={c.altLink.url}
+                key={alt.url}
+                href={alt.url}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-400 hover:underline"
               >
-                {c.altLink.label}
+                {alt.label}
                 <ArrowUpRight size={14} />
               </a>
-            ) : null}
+            ))}
           </div>
         ) : (
           <span className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-400 dark:text-zinc-600">
